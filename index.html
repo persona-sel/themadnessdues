@@ -1,0 +1,187 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/styles.css">
+        <style>
+            *,
+*:before,
+*:after{
+    /*font-family: 'Lato', sans-serif;*/
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+        background-image: url('captiveportal-bg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        backdrop-filter: blur(1.2rem);
+}
+
+.login-div {
+    height: 550px;
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.13);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+}
+
+.logo {
+    background-color: rgba(255, 255, 255, 0.945);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.logo img {
+    width: 100%;
+    transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+}
+
+.logo img:hover {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);  
+}
+
+.title {
+    font-family: 'Poppins',sans-serif;
+    text-align: center;
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 42px;
+    color: #fff;
+}
+
+.form {
+    font-family: 'Poppins',sans-serif;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.form input {
+    font-size: 18px;
+    font-weight: 300;
+    background: transparent;
+    padding: 10px 20px 10px 5px;
+    outline: none;
+    border: none;
+    letter-spacing: 1px;
+    box-shadow: rgba(0, 0, 0, 0.5);
+}
+
+.username, .password {
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 30px;
+    padding: 7px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+    text-align: inherit;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgba(255, 255, 255, 0.918);
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: rgba(255, 255, 255, 0.918);
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: rgba(255, 255, 255, 0.918);
+  }
+
+.login-submit {
+    width: 100%;
+    padding: 12px;
+    border: 3px solid white;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 30px;
+    background-color: transparent;
+    color: #fff;
+    margin: 25px 0;
+    transition: all .5s ease;
+    background-color: transparent;
+}
+
+.login-submit:hover {
+    color: #fff;
+    background-color: #0521A2;
+    border: 3px solid #0521A2;
+}
+
+        </style>
+    </head>
+    <body>
+
+        <div class="login-div">
+            <div class="logo">
+                <img src="captiveportal-logo.png" alt=""><br>
+                
+            </div>
+            
+            <div class="title">Software and Security Company</div>
+
+            <div class="form">
+
+                <form name="login_form" method="POST" action="$PORTAL_ACTION$">
+
+                <div class="username">
+                    <input type="text" name="auth_user" placeholder="User" id="auth_user">
+                </div>
+
+                <div class="password">
+                    <input type="password" name="auth_pass" placeholder="Password" id="auth_pass">
+                </div>
+
+                <!-- <div class="voucher">
+                    <input type="text" name="auth_voucher" placeholder="Voucher" id="loginvoucher" required>
+                </div> -->
+
+                <!--<div class="options">
+                    <div class="remember-me">
+                        <input id="remember-me" type="checkbox">
+                        <label for="remember-me">Remember me?</label>
+                    </div> -->
+
+                </div>
+
+                <input name="redirurl" type="hidden" value="$PORTAL_REDIRURL$">
+                <!--<input name="zone" type="hidden" value="$PORTAL_ZONE$"> -->
+		        <input type="submit" name="accept" class="login login-submit" value="Login" id="login">
+            </form>
+            <br  />
+            </div>
+        </div> 
+
+    </body>
+</html>
